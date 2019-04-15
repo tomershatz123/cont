@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     background-color: lightgray;
   }
@@ -50,4 +51,58 @@ body{
 .inputfile:focus + label,
 .inputfile + label:hover {
     background-color: #2e6da4;
+=======
+body{
+    background-color: lightgray;
+  }
+  
+  form{
+    padding: 3%;
+  }
+  
+  .btn{
+    min-width: 100px;
+  }
+  
+  .hello{
+    padding-bottom: 3%;
+  }
+  
+  .fileUpload {
+    position: relative;
+    overflow: hidden;
+  }
+  .fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  
+  .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .inputfile + label {
+    /* font-size: 1.25em;
+    font-weight: 700; */
+    color: white;
+    background-color: #2e6da4;
+    display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #2e6da4;
+>>>>>>> 738913bf660ffb537e4cd08069e4c8dabb6cf8f1
 }

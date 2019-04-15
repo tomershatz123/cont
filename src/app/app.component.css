@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* app css stylesheet */
 
 body{
@@ -18,3 +19,25 @@ body{
     float:none;
 }
   
+=======
+/* app css stylesheet */
+
+body{
+    background-color: lightgray;
+}
+
+.navbar-header {
+    float: left;
+    margin: 0;
+    margin-left: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: left;
+    width: 100%;
+    /* border-bottom: 0.1em solid rgb(32, 32, 32);   */
+}
+.navbar-brand {
+    float:none;
+}
+  
+>>>>>>> 738913bf660ffb537e4cd08069e4c8dabb6cf8f1
