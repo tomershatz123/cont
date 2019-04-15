@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="panel panel-default" style="margin:0px;padding:0px;">
+        <div class="panel-heading">
+          <p>
+            <span style="font-size:32px;">Results</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="font-size:18px">{{ (matchesObservable | async).length }} matches were found</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-primary" (click)="onClear()" style="margin-bottom:20px;">Clear</button>
+          </p>
+        </div>
+        <div class="panel-body">
+          <div>
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>Vessel (MMSI)</th>
+                  <th>Time</th>
+                  <th>Received</th>
+                  <th>Last location</th>
+                  <th>Reason</th>
+                  <th>GPS</th>
+                  <th>Longitude</th>
+                  <th>Latitude</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let res of (matchesObservable | async)">
+                  <td>{{ res.mmsi }}</td>
+                  <td>{{ res.time | date :'M/d/yy h:mm':'UTC' }}</td>
+                  <td>{{ res.received | date :'M/d/yy h:mm':'UTC' }}</td>
+                  <td>{{ res.lastLocation | date :'M/d/yy h:mm':'UTC' }}</td>
+                  <td>{{ res.reason }}</td>
+                  <td>{{ res.gps }}</td>
+                  <td>{{ res.longitude }}</td>
+                  <td>{{ res.latitude }}</td>
+                  <td>{{ res.address }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+  </div>
+</div>

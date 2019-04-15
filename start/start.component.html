@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <form class="panel panel-default">
+      <h1 class="hello"> Hello! </h1>
+      <h4>Step 1: Upload Telemetries xlsx file and Vessels xlsx file.</h4>
+      <!-- <input type="file" class="btn btn-primary" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx" class="inputfile"><!-- style="display: inline-block;" ->
+      <button type="button" class="btn btn-primary" (click)="Upload()" >Upload</button> -->
+
+      <input type="file" name="file" id="file" class="inputfile" (change)="incomingfile($event)" accept=".xlsx"/>
+      <label for="file" class="btn btn-primary">Upload</label>
+      <!-- <div class="fileUpload btn btn-primary">
+          <span>Upload</span>
+          <input type="file" class="upload" fileread="vm.uploadme" on-load="loadFile(file)"/>
+      </div> -->
+      <br>
+      <small *ngIf="vesselsLoaded && !telemetriesLoaded">Vessels file is loaded</small>
+      <small *ngIf="telemetriesLoaded && !vesselsLoaded">Telemetries file is loaded</small>
+      <small *ngIf="vesselsLoaded && telemetriesLoaded">Vessels and Telemtries files are loaded!</small>
+      <hr />
+      <h4>Step 2: Click 'Start' to match event to vessel.</h4> 
+      <button class="btn btn-primary" [disabled]="(!vesselsLoaded || !telemetriesLoaded)" (click)="onStart()">Start</button>
+      <hr/>
+  </form>  
+</div>
