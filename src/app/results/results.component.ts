@@ -16,10 +16,6 @@ export class ResultsComponent implements OnInit {
 
   ngOnInit() {
     this.matchesObservable = this.matchService.getMatches();
-    // const matchesObservable = this.matchService.getMatches();
-    // matchesObservable.subscribe((matchesData: Telemetry[]) => {
-    //         this.results = matchesData;
-    // });
   }
 
   onClear() {

@@ -13,6 +13,7 @@ export class MatchService {
   vessels: Vessel[] = [];
   matches = [];
   minutes15 = 15 * 60 * 1000;
+  matchesObservable = null;
   constructor() { }
 
   init(telemetries: Telemetry[], vessels: Vessel[]) {
@@ -43,17 +44,22 @@ export class MatchService {
             }
         });
         this.matches = results;
+        this.createMatchesObservable();
+    }
+  }
+
+  createMatchesObservable() {
+    if (this.matches) {
+      this.matchesObservable = new Observable(observer => {
+        setTimeout(() => {
+            observer.next(this.matches);
+        }, 500);
+      });
     }
   }
 
   getMatches() {
-    const matchesObservable = new Observable(observer => {
-      setTimeout(() => {
-          observer.next(this.matches);
-      }, 500);
-    });
-
-    return matchesObservable;
+    return this.matchesObservable;
   }
 
   doesMatch(event: Telemetry, vessel: Vessel) {
