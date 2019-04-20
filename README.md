@@ -1,6 +1,13 @@
 # Cont2
 
+This project was written as a home assignment for a company I was interviewed in.
+The user should upload 2 xlsx files. One of vessels and the other of telemetries.
+The application should read the files and find matching between event and vessel.
+A match is when an event row and vessel row both have the same longitude and latitude values, and Time and Received values should be up to 15 minutes deifference.
+Upload the files from ./src/data directory.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+
 
 ## Development server
 
