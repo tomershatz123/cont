@@ -3,7 +3,7 @@
         <div class="panel-heading">
           <p>
             <span style="font-size:32px;">Results</span>&nbsp;&nbsp;&nbsp;&nbsp;
-            <span style="font-size:18px">{{ (matchesObservable | async).length }} matches were found</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="font-size:18px">{{ (matchesObservable | async)?.length }} matches were found</span>&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="btn btn-primary" (click)="onClear()" style="margin-bottom:20px;">Clear</button>
           </p>
         </div>

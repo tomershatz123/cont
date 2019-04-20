@@ -4,6 +4,10 @@ body{
     background-color: lightgray;
 }
 
+.navbar{
+    background-color: white;
+}
+
 .navbar-header {
     float: left;
     margin: 0;

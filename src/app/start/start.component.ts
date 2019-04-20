@@ -43,7 +43,7 @@ export class StartComponent implements OnInit {
         const workbook = XLSX.read(bstr, {type: 'binary', cellDates: true});
         const first_sheet_name = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[first_sheet_name];
-        console.log(XLSX.utils.sheet_to_json(worksheet, {raw: true}));
+        // console.log(XLSX.utils.sheet_to_json(worksheet, {raw: true}));
         const mydata = XLSX.utils.sheet_to_json(worksheet, {raw: true});
         this.handleContent(mydata);
     };
