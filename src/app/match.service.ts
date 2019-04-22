@@ -22,7 +22,6 @@ export class MatchService {
     this.matches = [];
     this.isInitialized = true;
     this.findMatchings();
-    // this.formatResultsTimeField(this.matches);
   }
 
   findMatchings() {
@@ -75,12 +74,7 @@ export class MatchService {
   }
 
   filterValidEvents(events: Telemetry[]) {
-    const results: Telemetry[] = [];
-    events.forEach(evt => {
-        if (evt.gps && evt.gps.endsWith(' Valid')) {
-            results.push(evt);
-        }
-    });
+    const results: Telemetry[] = events.filter(evt => (evt.gps && evt.gps.endsWith(' Valid')));
     return results;
   }
 

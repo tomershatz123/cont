@@ -5,15 +5,10 @@
       <p>The user should upload 2 xlsx files: One of vessels and the other of telemetries. The application should read the files and find matching between event and vessel. A match is when an event row and vessel row both have the same longitude and latitude values, and Time and Received values should be at most 15 minutes difference. Upload the files from ./src/data directory.</p>
       <br/>
       <h4>Step 1: Upload Telemetries xlsx file and Vessels xlsx file.</h4>
-      <!-- <input type="file" class="btn btn-primary" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx" class="inputfile"><!-- style="display: inline-block;" ->
-      <button type="button" class="btn btn-primary" (click)="Upload()" >Upload</button> -->
 
       <input type="file" name="file" id="file" class="inputfile" (change)="incomingfile($event)" accept=".xlsx"/>
       <label for="file" class="btn btn-primary">Upload</label>
-      <!-- <div class="fileUpload btn btn-primary">
-          <span>Upload</span>
-          <input type="file" class="upload" fileread="vm.uploadme" on-load="loadFile(file)"/>
-      </div> -->
+      
       <br>
       <small *ngIf="vesselsLoaded && !telemetriesLoaded">Vessels file is loaded</small>
       <small *ngIf="telemetriesLoaded && !vesselsLoaded">Telemetries file is loaded</small>
